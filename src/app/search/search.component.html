@@ -1,0 +1,61 @@
+<div class="search">
+    <app-header [showSearch]='false'></app-header>
+
+    <div class="flex-container">
+        <div class="row">
+            <p class="search-content">Search LuckyTrip</p>
+            <p class="search-subcontent">350 destinations, 1500 blog posts, Unlimited Trips</p>
+
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="col-md-12 ">
+            <div class="destination form-group">
+
+
+
+                <div class="input-group">
+                    <i class="fa fa-search search-icon "></i>
+                    <input type="text" #dest name="search" class="search-input" placeholder="Enter a Destination...">
+                    <span><button type="submit" (click)="updateDestination(dest.value)"
+                            class="search-btn">Go</button></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<div class="cards">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-xl-12 col-lg-12 col-md-12 ">
+                <p class="card-text">Trending </p>
+            </div>
+        </div>
+        <div class="row justify-content-md-center" *ngIf="destinationArray.length !=0">
+
+            <div *ngFor="let dest of destinationArray; let i = index "
+                class="col-xl-4 col-lg-4 col-md-4 col-sm-12 padding">
+                <div class="card">
+
+
+                    <img src="{{dest['image_url']}}" (error)="setHideImage($event)"
+                        (click)="navigateTodestenation(dest['id'],dest['image_url'])" class="country-img" alt="">
+
+                </div>
+            </div>
+
+        </div>
+        <div class="row justify-content-md-center" *ngIf="destinationArray.length ==0 && !loading">
+            <p class="card-text">No Results Found </p>
+        </div>
+        <div class="row justify-content-md-center" *ngIf="loading">
+            <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </div>
+</div>

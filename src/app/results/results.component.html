@@ -1,0 +1,61 @@
+<div class="result" [ngStyle]="{'background-image': 'linear-gradient(to bottom, rgba(0, 0, 0,0),rgba(33, 31, 42,1) ),url(' +srcImage + ')',
+'background-size':notFit?'cover':'auto'}">
+    <app-header [showSearch]='true'></app-header>
+
+    <div class="flex-container">
+        <div class="row">
+            <p class="city">{{this.resultArray.destination.city}}</p>
+            <p class="country">{{this.resultArray.destination.country_name}}</p>
+
+
+        </div>
+
+    </div>
+
+</div>
+<div class="background-desc">
+    <div class="container">
+        <div class="row justify-content-md-center" *ngIf="loading">
+            <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-xl-12 col-lg-12 col-md-12 bottom">
+                <p class="title-desc">What’s it like? </p>
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-xl-12 col-lg-12 col-md-12">
+                <p class="description">{{this.resultArray.destination.description.text}}</p>
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-xl-12 col-lg-12 col-md-12">
+                <p class="card-text">Blog Posts </p>
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+
+            <div *ngFor="let count of counter; let i = index " class="col-xl-4 col-lg-4 col-md-4 col-sm-4 padding">
+                <div class="card">
+
+
+                </div>
+            </div>
+
+        </div>
+        <div class="row justify-content-md-center">
+            <p class="trip"> Find a trip to {{this.resultArray.destination.city}}</p>
+        </div>
+        <div class="row justify-content-md-center">
+            <p class="description">Tap the Lucky button to get started…</p>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="breathing">
+                <a class="luckybutton"> </a>
+            </div>
+        </div>
+
+    </div>
+</div>

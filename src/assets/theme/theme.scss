@@ -1,0 +1,52 @@
+@font-face {
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: 900;
+  src: url("/assets/fonts/AvenirLTStd-Black.otf");
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: Avenirnormal;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/Avenir Regular.ttf");
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: Avenir heavey;
+  font-style: normal;
+  font-weight: 900;
+  src: url("/assets/fonts/Avenir Heavy.ttf");
+  font-display: swap;
+}
+
+body{
+  margin: 0;
+  
+}
+.card{
+    height: 250px;
+   background-color: #A3A9C5 !important;
+   border-radius:10px !important;
+   margin-right: 20px;
+   margin-bottom: 20px;
+   border: 0 !important;
+   max-width: 350px;
+   
+}
+
+.card-text{
+   font-family : Avenir; 
+    color: #7BFBFF;
+    font-size: 32px;
+    padding-bottom: 9px;
+}
+
+.padding
+{
+    padding:0 !important;
+}
