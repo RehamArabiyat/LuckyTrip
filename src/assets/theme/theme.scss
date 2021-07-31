@@ -29,13 +29,15 @@ body{
   
 }
 .card{
-    height: 250px;
+  height: 250px;
    background-color: #A3A9C5 !important;
    border-radius:10px !important;
    margin-right: 20px;
    margin-bottom: 20px;
    border: 0 !important;
-   max-width: 350px;
+   max-width: 359px;
+   width:359px;
+   min-width: 359px;
    
 }
 
@@ -49,4 +51,11 @@ body{
 .padding
 {
     padding:0 !important;
+}
+
+.center{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   max-width: 359px;
 }

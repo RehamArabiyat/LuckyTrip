@@ -15,29 +15,25 @@
 </div>
 <div class="background-desc">
     <div class="container">
-        <div class="row justify-content-md-center" *ngIf="loading">
-            <div class="spinner-border text-primary" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
         <div class="row justify-content-md-center">
             <div class="col-xl-12 col-lg-12 col-md-12 bottom">
                 <p class="title-desc">What’s it like? </p>
             </div>
         </div>
-        <div class="row justify-content-md-center">
+        <div class="row ">
             <div class="col-xl-12 col-lg-12 col-md-12">
                 <p class="description">{{this.resultArray.destination.description.text}}</p>
             </div>
         </div>
-        <div class="row justify-content-md-center">
+        <div class="row ">
             <div class="col-xl-12 col-lg-12 col-md-12">
                 <p class="card-text">Blog Posts </p>
             </div>
         </div>
-        <div class="row justify-content-md-center">
+        <div class="row">
 
-            <div *ngFor="let count of counter; let i = index " class="col-xl-4 col-lg-4 col-md-4 col-sm-4 padding">
+            <div *ngFor="let count of counter; let i = index "
+                class="col-xl-4 col-lg-4 col-md-4 col-sm-12 padding center">
                 <div class="card">
 
 

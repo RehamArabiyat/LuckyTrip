@@ -12,7 +12,7 @@ export class ResultsComponent implements OnInit {
   resultArray: any;
   srcImage = "";
   notFit = false;
-  loading = false;
+
   counter = [1, 2, 3, 4, 5, 6];
   constructor(private activatedRoute: ActivatedRoute,
     private destination: DestinationService,
@@ -43,14 +43,14 @@ export class ResultsComponent implements OnInit {
   }
 
   getResultById(id: string) {
-    this.loading = true;
+
     this.destination.getDestinationById(id).subscribe(
       (res: any) => {
-        this.loading = false;
+
         this.resultArray = res;
       },
       (error) => {
-        this.loading = false;
+
       }
     );
 
